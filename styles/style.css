@@ -81,3 +81,40 @@ nav li a{
     color: aliceblue;
     
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* responsive  */
+ @media screen and (max-width: 576px) {
+    nav, .banner-container, nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin-bottom: 20px;
+    }
+    .banner-container{
+        margin-top: 30px;
+    }
+    .banner-title{
+        font-size: 3rem;
+        width: 500;
+    }
+ }
