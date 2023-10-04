@@ -4,15 +4,16 @@
     font-family: 'Poppins', sans-serif;
     background-color: #FFF;
 }
-header{
-    padding: 50px 200px;
-    
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 .nav-title{
     font-size: 1.5rem;
@@ -43,8 +44,7 @@ nav li a{
 .banner-container{
     display: flex;
     justify-content: space-between;
-    gap: 200px;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .btn-img{
@@ -85,24 +85,51 @@ nav li a{
     color: aliceblue;
     
  }
-
-/* styles spoonser section */
-.spoonser-section{
-    max-width: 1440px;
-    margin: 0 auto;
-    
-    
-    
-}
-
 .spoonser-img{
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
-   
+    margin-top: 80px;
 }
-.spoonser-img img{
-    padding: 30px 35px;
+/* Collection Section */
+.collection-section{
+    margin: 80px 0;
+}
+
+.collection-items{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 30px;
+    
+}
+.collection-content{
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    width: 329px;
+    height: 476px;
+    padding: 20px 20px;
+    margin: 0;
+}
+.collection-content img{
+    width: 100%;
+    height: auto;
+}
+.collection-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.collection-content p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.collection-description{
+    font-size: 1.5rem;   
+}
+
+.collection-section > h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 
@@ -110,39 +137,51 @@ nav li a{
 
 
 
-
-
-
-
-
-
-
-
-
-
- /* responsive  */
- @media screen and (max-width: 576px) {
-    nav, .banner-container, nav ul{
-        flex-direction: column;
+@media screen and (max-width:576px) {
+    nav, nav ul{
+        flex-direction:column;
     }
+    /* banner responsive */
+
     .banner-container{
-        gap: 50px;
+        flex-direction: column-reverse;
+        align-items: center;
     }
-    nav ul li{
-        margin-bottom: 20px;
+    .banner-img img{
+        width: 440px;
+        height: auto;  
     }
-    .banner-container{
-        margin-top: 30px;
-    }
+
     .banner-title{
         font-size: 3rem;
+        font-weight: 700;
+        width: 550px;
+        text-align: center;   
+    }
+
+    .banner-description{
+        font-size: 1.2rem;
+        font-weight: 600;
         width: 500;
+        text-align: center;
     }
- }
-/* responsive for tablet */
-@media screen and (min-width: 576px) and (max-width:962px) {
-    .banner-container {
-        flex-direction: column;
-        gap:50px;
+    .primary-btn{
+    background-color:#E02C6D;
+    border: 0;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 20px 40px;
+    color: aliceblue;
     }
+    .banner-content{
+        text-align: center;
+    }
+    /* Spoonser section */
+    .spoonser-img{
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        align-items: center;
+    }
+
 }
